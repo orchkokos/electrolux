@@ -1,1 +1,4 @@
-electrolux
+test usage 
+```
+ceedling test:all
+```
