@@ -16,7 +16,7 @@ void test_uart_hub( void )
     memset(&evt, 0, sizeof(uart_event_t));
     evt.type = UART_EVENT_TYPE_RX_BYTE_READY;
 
-    uart_write_ExpectWithArrayAndReturn(0, test_message, sizeof(test_message), 128, 0);
+    uart_write_ExpectWithArrayAndReturn(1, test_message, sizeof(test_message), 128, 0);
 
     for (uint16_t i = 0; i < 128; i++)
     {

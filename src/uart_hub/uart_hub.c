@@ -27,7 +27,7 @@ static void uart1_handler(uart_event_t const *p_event)
                 buffer.index = 0;
                 memcpy(buffer.write, buffer.read, BUFFER_SIZE);
                 memset(buffer.read, 0, BUFFER_SIZE);
-                uart_ret_code_t err = uart_write(UART1_INSTANCE, buffer.write, BUFFER_SIZE);
+                uart_ret_code_t err = uart_write(UART2_INSTANCE, buffer.write, BUFFER_SIZE);
                 if (err != UART_RET_CODE_SUCCESS)
                 {
                     // handle error
